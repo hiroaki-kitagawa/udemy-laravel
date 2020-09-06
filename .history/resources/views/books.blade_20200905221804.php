@@ -5,12 +5,12 @@
 		<div class="col-sm-offset-2 col-sm-8">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					新たに書籍を追加する
+					New Book
 				</div>
 
 				<div class="panel-body">
 					<!-- Display Validation Errors -->
-					@include('commons.errors')
+					@include('common.errors')
 
 					<!-- New Book Form -->
 					<form action="/book" method="POST" class="form-horizontal">
@@ -18,7 +18,7 @@
 
 						<!-- Book Name -->
 						<div class="form-group">
-							<label for="task-name" class="col-sm-3 control-label">書籍タイトル</label>
+							<label for="task-name" class="col-sm-3 control-label">Book</label>
 
 							<div class="col-sm-6">
 								<input type="text" name="name" id="book-name" class="form-control" value="{{ old('book') }}">
@@ -47,7 +47,7 @@
 					<div class="panel-body">
 						<table class="table table-striped task-table">
 							<thead>
-								<th>書籍タイトル</th>
+								<th>Book</th>
 								<th>&nbsp;</th>
 							</thead>
 							<tbody>

@@ -17,27 +17,4 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     $books = Book::all();
     return view('books', ['books' => $books]);
-})->middleware('auth');
-
-Route::post('/book', function(Request $request) {
-    $validator = Validator::make($request->all(), [
-        'name' => 'requried|max:255',
-    ]);
-
-    $book = new Book;
-    $book->title = $request->name;
-    $book->save();
-
-    return redirect('/');
-
 });
-
-Route::delete('/book/{book}', function(Book $book) {
-    $book->delete();
-
-    return redirect('/');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

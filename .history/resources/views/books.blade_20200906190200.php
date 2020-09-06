@@ -47,7 +47,7 @@
 					<div class="panel-body">
 						<table class="table table-striped task-table">
 							<thead>
-								<th>書籍タイトル</th>
+								<th>Book</th>
 								<th>&nbsp;</th>
 							</thead>
 							<tbody>
